@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Page</title>
     <link rel="icon" type="image/x-icon" href="favicon.png">
     <style>
-       @import url(https://fonts.google.com/specimen/Montserrat);
-       @import url(https://fonts.google.com/specimen/Fraunces);
+        @import url(https://fonts.google.com/specimen/Montserrat);
+        @import url(https://fonts.google.com/specimen/Fraunces);
 
         * {
             margin: 0;
@@ -26,34 +27,46 @@
             color: hsl(0, 0%, 7%);
         }
 
-        header {
+        .product-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+            width: min(100%, 52rem);
+            align-items: stretch;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px 0 0 20px;
+        }
+
+        .card {
             width: 100%;
             max-width: 26rem;
-            height: 100%;
-            max-height: 40rem;  
+            min-height: 35rem;
             padding: 24px;
             background-color: hsl(0, 0%, 100%);
             border-radius: 20px;
-            box-shadow: 8px 8px 0 black;
+            display: flex;
+            flex-direction: column;
         }
-         
-        .card {
-            padding: 24px;
-        
-        }   
+
+
+
         .category {
             color: hsl(228, 12%, 48%);
             font-size: 1.2rem;
             font-weight: 700;
             letter-spacing: 0.1rem;
             text-transform: uppercase;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
         }
 
         .product-title {
-            font-size: 2rem;
-            font-weight: 900;
-            margin-bottom: 10px;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 1000;
+            margin-bottom: 30px;
             font-family: "Fraunces", serif;
         }
 
@@ -61,7 +74,7 @@
             font-size: 1.2rem;
             color: hsl(228, 12%, 48%);
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             line-height: 1.5;
             font-family: "Fraunces", serif;
         }
@@ -69,7 +82,6 @@
         .price {
             font-size: 3rem;
             font-weight: 900;
-            margin-bottom: 20px;
             font-family: "Fraunces", serif;
             display: inline-block;
             padding-right: 27px;
@@ -80,42 +92,91 @@
             font-size: 1.2rem;
             color: hsl(228, 12%, 48%);
             font-weight: 700;
-            margin-bottom: 20px;
+            margin-bottom: auto;
             line-height: 1.5;
             font-family: "Fraunces", serif;
-            display: inline-block;
             text-decoration: line-through;
         }
 
         .button:hover {
-            background-color: hsl(158, 17%, 91%);
+            background-color: hsl(156, 93%, 11%);
             cursor: pointer;
             font-weight: bold;
         }
 
-        .product-image {
-            display: grid;
-            width: 48%;
-            max-width: 786px;
+        .button {
+            width: 100%;
+            padding: 15px;
+            background-color: hsl(157, 66%, 21%);
+            color: white;
+            border: none;
             border-radius: 10px;
-            margin-bottom: 20px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            cursor: pointer;
+            margin-top: auto;
         }
-        </style>
+
+        .button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        @media (max-width: 40rem) {
+            body {
+                padding: 12px;
+            }
+
+            .product-layout {
+                grid-template-columns: 1fr;
+                width: 100%;
+            }
+
+            .product-image {
+                height: auto;
+                aspect-ratio: 1.25 / 1;
+                border-radius: 20px 20px 0 0;
+            }
+
+            .card {
+                max-width: none;
+                min-height: 0;
+                border-radius: 0 0 20px 20px;
+            }
+
+            .category,
+            .product-title,
+            .description {
+                margin-bottom: 20px;
+            }
+
+            .price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <img  class="product-image" src="image.jpg" alt="
+    <main class="product-layout">
+        <img class="product-image" src="image.jpg" alt="Perfume">
+
         <div class="card">
 
-            <p class="category">Perfume</p>
-            
-            <h1 class="product-title">Gabrielle Essence Eau De Parfum</h1>
-            
-            <p class="description">A floral,solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator for the House of CHANEL.</p>
+        <p class="category">Perfume</p>
 
-            <p class="price" >$149.99</p>
-            <p class="price2">$169.99</p>
-            <button class="button"  style="width: 100%; padding: 15px; background-color: hsl(158, 36%, 37%); color: white; border: none; border-radius: 10px; font-size: 1.2rem; font-weight: 500; cursor: pointer;"> <img src="cart.svg" alt="Cart"> Add to Cart</button>
+        <h1 class="product-title">Gabrielle Essence Eau De Parfum</h1>
+
+        <p class="description">A floral,solar and voluptuous interpretation composed by Olivier Polge, Perfumer-Creator
+            for the House of CHANEL.</p>
+
+        <p class="price">$149.99</p>
+        <p class="price2">$169.99</p>
+        <button class="button"><img src="cart.svg" alt="Cart"> Add to Cart</button>
         </div>
-        
+    </main>
+
 </body>
+
 </html>
