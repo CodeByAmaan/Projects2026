@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Social Links PROFILE</title>
+
     <style>
         @import url(https://fonts.google.com/specimen/Inter);
         * {
@@ -18,17 +19,21 @@
         }
 
         .card {
-            background-color:  hsl(0, 0%, 20%);
+            background-color: hsl(0, 0%, 12%);
             width:100%;
-            max-width: 400px;
+            max-width: 476px;
              height:85vh;
-            padding: 20px;
+            padding: 24px;
             border: 1px solid #ccc;
-            border-radius: 10px;
+            border-radius: 15px;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.1);
             margin: 50px auto;
         }
+         .avatar {
+            border-radius: 50%;
+            margin-bottom: 20px;
+         }
           .name {
             font-size: 2rem;
             margin-bottom: 10px;
@@ -43,8 +48,57 @@
             font-family: 'Inter', sans-serif;
             text-transform:capitalize;
             font-weight: 550;
-
           }
+    .bio {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        padding-top: 20px;
+        color: hsl(0, 0%, 70%);
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+    }
+
+    .social-links {
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        font-family: 'Inter', sans-serif;
+        font-size:1.2rem;
+        font-weight:550;
+        padding-top: 20px;
+}
+
+    a {
+        text-decoration: none;
+        color: hsl(0, 0%, 100%);
+        transition: color 0.3s ease;
+
+    }
+    a:hover {
+        color: hsl(0, 0%, 8%);
+        background-color:hsl(75, 94%, 57%)
+    }
+    .socials {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding: 6px 14px;
+       margin: 0 auto;
+        width:48vh;
+        height: 64px;
+        border-radius: 15px;
+        background-color: hsl(0, 0%, 20%);
+        transition: background-color 0.3s ease;
+    }
+      .textend {
+        text-align: center;
+        margin-top: 20px;
+        color: hsl(0, 0%, 70%);
+        font-family: 'Inter', sans-serif;
+        font-size: 0.9rem;
+      }
 
     </style>
 </head>
@@ -53,16 +107,19 @@
         <img  class="avatar" src="avatar.png" alt="">  
         <h1 class="name">Amaan Hussain</h1>
         <div class="location">Punjab, Pakistan</div>
-        <div class="bio">Front-end Developer</div>
+        <div class="bio">"Front-end Developer"</div>
 
         <div class="social-links">
-            <a href="https://github.com/CodeByAmaan" target="_blank">GitHub</a>
-            <a href="https://www.frontendmentor.io/profile/CodeByAmaan" target="_blank">Frontend Mentor</a>
-            <a href="https://www.linkedin.com/in/amaan-hussain-1a2b3c4d/" target="_blank">LinkedIn</a>
-            <a href="#" target="_blank">Twitter</a>
+            <a class="socials" href="https://github.com/CodeByAmaan" target="_blank">GitHub</a>
+            <a class="socials" href="https://www.frontendmentor.io/profile/CodeByAmaan" target="_blank">Frontend Mentor</a>
+            <a class="socials" href="#" target="_blank">LinkedIn</a>
+            <a class="socials" href="https://twitter.com/MrBeast" target="_blank">Twitter</a>
+            <a class="socials" href="https://www.instagram.com/MrBeast/" target="_blank">Instagram</a>
             
             
         </div>
     </div>
+
+    <footer class="textend">Project by <a href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor</a> coded by <a href="https://www.github.com/CodeByAmaan" target="_blank">Amaan Hussain</a></footer>
 </body>
 </html>
