@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url(https://fonts.google.com/specimen/Inter);
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+           background-color:  hsl(0, 0%, 8%);
+           max-height: 40vh;
+           height: 100%;
+        }
+
+        .card {
+            background-color:  hsl(0, 0%, 20%);
+            width:100%;
+            max-width: 400px;
+             height:85vh;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 50px auto;
+        }
+          .name {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: hsl(0, 0%, 100%);
+            font-family: 'Inter', sans-serif;
+          }
+
+          .location {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: hsl(75, 94%, 57%);
+            font-family: 'Inter', sans-serif;
+            text-transform:capitalize;
+            font-weight: 550;
+
+          }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img  class="avatar" src="avatar.png" alt="">  
+        <h1 class="name">Amaan Hussain</h1>
+        <div class="location">Punjab, Pakistan</div>
+        <div class="bio">Front-end Developer</div>
+
+        <div class="social-links">
+            <a href="https://github.com/CodeByAmaan" target="_blank">GitHub</a>
+            <a href="https://www.frontendmentor.io/profile/CodeByAmaan" target="_blank">Frontend Mentor</a>
+            <a href="https://www.linkedin.com/in/amaan-hussain-1a2b3c4d/" target="_blank">LinkedIn</a>
+            <a href="#" target="_blank">Twitter</a>
+            
+            
+        </div>
+    </div>
+</body>
+</html>
