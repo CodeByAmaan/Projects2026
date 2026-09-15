@@ -86,7 +86,7 @@
         padding: 6px 14px;
        margin: 0 auto;
         width:48vh;
-        height: 64px;
+        height: 8vh;
         border-radius: 15px;
         background-color: hsl(0, 0%, 20%);
         transition: background-color 0.3s ease;
@@ -97,6 +97,35 @@
         color: hsl(0, 0%, 70%);
         font-family: 'Inter', sans-serif;
         font-size: 0.9rem;
+      }
+
+      @media (max-width: 600px) {
+        .card {
+            width: 90%;
+            height: auto;
+            padding: 20px;
+        }
+        .avatar {
+            width: 100px;
+            height: 100px;
+        }
+        .name {
+            font-size: 1.5rem;
+        }
+        .location {
+            font-size: 1rem;
+        }
+        .bio {
+            font-size: 0.9rem;
+        }
+        .social-links {
+            flex-direction: column;
+            gap: 10px;
+        }
+        .socials {
+            width: 100%;
+            max-width: 320px;
+        }
       }
 
     </style>
