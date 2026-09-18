@@ -1,176 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Social Links PROFILE</title>
+    <link rel="icon" href="favicon.png" type="image/x-icon">
 
     <style>
         @import url(https://fonts.google.com/specimen/Inter);
+
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
+
         body {
-           background-color:  hsl(0, 0%, 8%);
-           max-height: 40vh;
-           height: 100%;
+            background-color: hsl(0, 0%, 8%);
+            max-height: 40vh;
+            height: 100%;
         }
 
         .card {
             background-color: hsl(0, 0%, 12%);
-            width:100%;
-            max-width: 476px;
-             height:85vh;
-            padding: 24px;
+            width: 100%;
+            max-width: 29.75rem;
+            height: 85vh;
+            padding: clamp(20px, 5%, 40px);
             border-radius: 15px;
             text-align: center;
             box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.1);
             margin: 50px auto;
         }
-         .avatar {
+
+        .avatar {
             border-radius: 50%;
             margin-bottom: 20px;
-         }
-          .name {
+        }
+
+        .name {
             font-size: 2rem;
             margin-bottom: 10px;
             color: hsl(0, 0%, 100%);
             font-family: 'Inter', sans-serif;
-          }
+        }
 
-          .location {
+        .location {
             font-size: 1.2rem;
             margin-bottom: 10px;
             color: hsl(75, 94%, 57%);
             font-family: 'Inter', sans-serif;
-            text-transform:capitalize;
+            text-transform: capitalize;
             font-weight: 550;
-          }
-    .bio {
-        font-size: 1.1rem;
-        margin-bottom: 20px;
-        padding-top: 20px;
-        color: hsl(0, 0%, 70%);
-        font-family: 'Inter', sans-serif;
-        font-weight: 400;
-    }
-
-    .social-links {
-        display:flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 15px;
-        font-family: 'Inter', sans-serif;
-        font-size:1.2rem;
-        font-weight:550;
-        padding-top: 20px;
-}
-
-    a {
-        text-decoration: none;
-        color: hsl(0, 0%, 100%);
-        transition: color 0.3s ease;
-
-    }
-    a:hover {
-        color: hsl(0, 0%, 8%);
-        background-color:hsl(75, 94%, 57%)
-    }
-    .socials {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        padding: 6px 14px;
-       margin: 0 auto;
-        width:48vh;
-        height: 8vh;
-        border-radius: 15px;
-        background-color: hsl(0, 0%, 20%);
-        transition: background-color 0.3s ease;
-    }
-      .textend {
-        text-align: center;
-        margin-top: 20px;
-        color: hsl(0, 0%, 70%);
-        font-family: 'Inter', sans-serif;
-        font-size: 0.9rem;
-      }
-
-      @media screen and (max-width: 786px) {
-        .card {
-            width: 90%;
-            height: auto;
-            padding: 20px;
         }
-        .avatar {
-            width: 100px;
-            height: 100px;
-        }
-        .name {
-            font-size: 1.5rem;
-        }
-        .location {
-            font-size: 1rem;
-        }
+
         .bio {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            padding-top: 20px;
+            color: hsl(0, 0%, 70%);
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 550;
+            padding-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: hsl(0, 0%, 100%);
+            transition: color 0.3s ease;
+
+        }
+
+        a:hover {
+            color: hsl(0, 0%, 8%);
+            background-color: hsl(75, 94%, 57%)
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 6px 14px;
+            margin: 0 auto;
+            width: 48vh;
+            height: 8vh;
+            border-radius: 15px;
+            background-color: hsl(0, 0%, 20%);
+            transition: background-color 0.3s ease;
+        }
+
+        .textend {
+            text-align: center;
+            margin-top: 20px;
+            color: hsl(0, 0%, 70%);
+            font-family: 'Inter', sans-serif;
             font-size: 0.9rem;
         }
-        .social-links {
-            flex-direction: column;
-            gap: 10px;
 
+        @media screen and (max-width: 786px) {
+            .card {
+                width: 90%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .avatar {
+                width: 100px;
+                height: 100px;
+            }
+
+            .name {
+                font-size: 1.5rem;
+            }
+
+            .location {
+                font-size: 1rem;
+            }
+
+            .bio {
+                font-size: 0.9rem;
+            }
+
+            .social-links {
+                flex-direction: column;
+                gap: 10px;
+
+            }
+
+            .socials {
+                width: 100%;
+                max-width: 320px;
+            }
         }
-        .socials {
-            width: 100%;
-            max-width: 320px;
-        }
-      }
 
 
-      @media  screen and (max-width: 1400px) {
-        .card {
-            width: 80%;
-            height: auto;
-            padding: 20px;
-        }
-        .avatar {
-            width: 120px;
-            height: 120px;
-        }
-        .name {
-            font-size: 1.8rem;
-        }
-        .location {
-            font-size: 1.1rem;
-        }
-        .bio {
-            font-size: 1rem;
-        }
-      }
+        @media screen and (max-width: 1400px) {
+            .card {
+                width: 80%;
+                height: auto;
+                padding: 20px;
+            }
 
+            .avatar {
+                width: 120px;
+                height: 120px;
+            }
+
+            .name {
+                font-size: 1.8rem;
+            }
+
+            .location {
+                font-size: 1.1rem;
+            }
+
+            .bio {
+                font-size: 1rem;
+            }
+        }
+
+        @media screen and (max-width:2600px) {
+            .card {
+                width: 60%;
+                height: auto;
+                padding: 20px;
+            }
+
+            .socials {
+                width: 95%;
+                max-width: 400px;
+            }
+        }
     </style>
 </head>
+
 <body>
     <div class="card">
-        <img  class="avatar" src="avatar.png" alt="">  
+        <img class="avatar" src="avatar.png" alt="">
         <h1 class="name">Amaan Hussain</h1>
         <div class="location">Punjab, Pakistan</div>
         <div class="bio">"Front-end Developer"</div>
 
         <div class="social-links">
             <a class="socials" href="https://github.com/CodeByAmaan" target="_blank">GitHub</a>
-            <a class="socials" href="https://www.frontendmentor.io/profile/CodeByAmaan" target="_blank">Frontend Mentor</a>
+            <a class="socials" href="https://www.frontendmentor.io/profile/CodeByAmaan" target="_blank">Frontend
+                Mentor</a>
             <a class="socials" href="#" target="_blank">LinkedIn</a>
             <a class="socials" href="https://twitter.com/MrBeast" target="_blank">Twitter</a>
             <a class="socials" href="https://www.instagram.com/MrBeast/" target="_blank">Instagram</a>
-            
-            
+
+
         </div>
     </div>
 
-    <footer class="textend">Project by <a href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor</a> coded by <a href="https://www.github.com/CodeByAmaan" target="_blank">Amaan Hussain</a></footer>
+    <footer class="textend">Project by <a href="https://www.frontendmentor.io/" target="_blank">Frontend Mentor</a>
+        coded by <a href="https://www.github.com/CodeByAmaan" target="_blank">Amaan Hussain</a></footer>
 </body>
+
 </html>
